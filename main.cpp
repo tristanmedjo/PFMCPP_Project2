@@ -14,14 +14,14 @@ video: Chapter 2 - Part 3
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ char
+ bool
+ void
+ float
+ double
+ * I'm assuming you weren't looking for long / unsigned, etc
+
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
@@ -60,12 +60,41 @@ send me a DM to check your pull request
 //2)
 void variableDeclarations()
 {
-    //example:
-    int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    int eggs = 0;
+    int chocolateChips = 1;
+    int butterSticks = 1;
+
+    float flour = 1.f;
+    float cinnamon = 0.25f;
+    float sugar = 1.f;
+
+    double cookTime = 60.5;
+    double ovenTemperature = 400.5;
+    double cupsOfMilk = 1.75;
+
+    bool ovenOn = true;
+    bool mealReadyToCook = false;
+    bool mealCooked = false;
+
+    char stepOne = 'a';
+    char stepTwo = 'b';
+    char stepThree = 'c';
+
+    ignoreUnused(eggs);
+    ignoreUnused(chocolateChips);
+    ignoreUnused(butterSticks);
+    ignoreUnused(flour);
+    ignoreUnused(cinnamon);
+    ignoreUnused(sugar);
+    ignoreUnused(cookTime);
+    ignoreUnused(ovenTemperature);
+    ignoreUnused(cupsOfMilk);
+    ignoreUnused(ovenOn);
+    ignoreUnused(mealReadyToCook);
+    ignoreUnused(mealCooked);
+    ignoreUnused(stepOne);
+    ignoreUnused(stepTwo);
+    ignoreUnused(stepThree);
 }
 /*
  10 functions
@@ -80,70 +109,111 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+void goToStore(int moveSpeed, bool isTired = false)
+{
+    ignoreUnused(moveSpeed, isTired);
+}
 /*
  2)
  */
-
+int spawnWeapon(int weaponType, int ammo = 60, float spawnDelay = 0.5f)
+{
+    ignoreUnused(weaponType, ammo, spawnDelay);
+    return{};
+}
 /*
  3)
  */
-
+float depositMoney(float depositAmount, int accountNumber = 123456789)
+{
+    ignoreUnused(depositAmount, accountNumber);
+    return{};
+}
 /*
  4)
  */
-
+double LFO(int shape = 3, double frequency = 50.50, float offset = 50.f)
+{
+    ignoreUnused(shape, frequency, offset);
+    return{};
+}
 /*
  5)
  */
-
+int cookChicken(bool isChickenFresh, float chickenWeight = 15.f, int cookingLevel = 3)
+{
+    ignoreUnused(isChickenFresh, chickenWeight, cookingLevel);
+    return{};
+}
 /*
  6)
  */
-
+void doDishes(bool hasDirtyDishes, float availableTime = 30.5f, double waterTemperature = 145.654, float remainingSoap = 1.1f)
+{
+    ignoreUnused(hasDirtyDishes, availableTime, waterTemperature, remainingSoap);
+}
 /*
  7)
  */
-
+float setMoveSpeed(bool canSpeedBeChanged, int newSpeed, float speedMultiplier = 2.5f)
+{
+    ignoreUnused(canSpeedBeChanged, newSpeed, speedMultiplier);
+    return{};
+}
 /*
  8)
  */
-
+void sortFolders(bool readOnly, char targetLocation, int sortingMechanism)
+{
+    ignoreUnused(readOnly, targetLocation, sortingMechanism);
+}
 /*
  9)
  */
+int getTotalObjectsWithinRadius(float radiusLength = 50.f, char objectToBeFound = 'v', bool isObjectVisible = true)
+{
+    ignoreUnused(radiusLength, objectToBeFound, isObjectVisible);
+    return{};
+}
 
 /*
  10)
  */
+void disableInput(bool isInputEnabled, int inputType, double bufferTime = 0.005)
+{
+    ignoreUnused(isInputEnabled, inputType, bufferTime);
+}
 
 int main()
 {
-    //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    auto carRented = rentACar(6, 2); 
-    
     //1)
-    
+    goToStore(6, true);
     //2)
-    
+    auto newWeapon = spawnWeapon(5, 60, 0.1f);
     //3)
-    
+    auto accountTotalAfterDeposit = depositMoney(1500.59f, 123456789);
     //4)
-    
+    auto modulation = LFO(1, 150.50, 5.5f);
     //5)
-    
+    auto spawnFood = cookChicken(true, 10.f, 1);
     //6)
-    
+    doDishes(true, 10.f, 150.50, 0.8f);
     //7)
-    
+    auto moveSpeed = setMoveSpeed(true, 500, 1.5f);
     //8)
-    
+    sortFolders(false, 'v', 5);
     //9)
-    
+    auto nearbyObjects = getTotalObjectsWithinRadius(50.f, 'a', false);
     //10)
+    disableInput(true, 1, 0.001);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(newWeapon);
+    ignoreUnused(accountTotalAfterDeposit);
+    ignoreUnused(modulation);
+    ignoreUnused(spawnFood);
+    ignoreUnused(moveSpeed);
+    ignoreUnused(nearbyObjects);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
