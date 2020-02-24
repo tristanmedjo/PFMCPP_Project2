@@ -89,88 +89,78 @@ void variableDeclarations() {
  10 functions
  example:
  */
-bool rentACar(
-	int rentalDuration,
-	int carType = 0) // function declaration with random number of arguments,
-					 // arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0) // function declaration with random number of arguments,
 {
-	ignoreUnused(rentalDuration, carType); // passing each function parameter to
-										   // the ignoreUnused() function
-	return {}; // if your function returns something other than void, add
-			   // 'return {};' at the end of it.
+	ignoreUnused(rentalDuration, carType); // passing each function parameter to the ignoreUnused() function
+	return {}; // if your function returns something other than void, add 'return {};' at the end of it.
 }
 
 /*
  1)
  */
-void goToStore(int moveSpeed, bool isTired = false) {
+void goToStore(int moveSpeed, bool isTired = false) 
+{
 	ignoreUnused(moveSpeed, isTired);
 }
 /*
  2)
  */
-int spawnWeapon(int weaponType, int ammo = 60, float spawnDelay = 0.5f) {
+int spawnWeapon(int weaponType, int ammo = 60, float spawnDelay = 0.5f) 
+{
 	ignoreUnused(weaponType, ammo, spawnDelay);
 	return {};
 }
 /*
  3)
  */
-float depositMoney(float depositAmount, int accountNumber = 123456789) {
+float depositMoney(float depositAmount, int accountNumber = 123456789) 
+{
 	ignoreUnused(depositAmount, accountNumber);
 	return {};
 }
 /*
  4)
  */
-double LFO(int shape = 3, double frequency = 50.50, float offset = 50.f) {
+double LFO(int shape = 3, double frequency = 50.50, float offset = 50.f) 
+{
 	ignoreUnused(shape, frequency, offset);
 	return {};
 }
 /*
  5)
  */
-int cookChicken(
-	bool isChickenFresh,
-	float chickenWeight = 15.f,
-	int cookingLevel = 3) {
+int cookChicken(bool isChickenFresh, float chickenWeight = 15.f, int cookingLevel = 3) 
+{
 	ignoreUnused(isChickenFresh, chickenWeight, cookingLevel);
 	return {};
 }
 /*
  6)
  */
-void doDishes(
-	bool hasDirtyDishes,
-	float availableTime = 30.5f,
-	double waterTemperature = 145.654,
-	float remainingSoap = 1.1f) {
-	ignoreUnused(
-		hasDirtyDishes, availableTime, waterTemperature, remainingSoap);
+void doDishes(bool hasDirtyDishes, float availableTime = 30.5f, double waterTemperature = 145.654, float remainingSoap = 1.1f) 
+{
+	ignoreUnused(hasDirtyDishes, availableTime, waterTemperature, remainingSoap);
 }
 /*
  7)
  */
-float setMoveSpeed(
-	bool canSpeedBeChanged,
-	int newSpeed,
-	float speedMultiplier = 2.5f) {
+float setMoveSpeed(bool canSpeedBeChanged, int newSpeed, float speedMultiplier = 2.5f) 
+{
 	ignoreUnused(canSpeedBeChanged, newSpeed, speedMultiplier);
 	return {};
 }
 /*
  8)
  */
-void sortFolders(bool readOnly, char targetLocation, int sortingMechanism) {
+void sortFolders(bool readOnly, char targetLocation, int sortingMechanism) 
+{
 	ignoreUnused(readOnly, targetLocation, sortingMechanism);
 }
 /*
  9)
  */
-int getTotalObjectsWithinRadius(
-	float radiusLength = 50.f,
-	char objectToBeFound = 'v',
-	bool isObjectVisible = true) {
+int getTotalObjectsWithinRadius(float radiusLength = 50.f, char objectToBeFound = 'v', bool isObjectVisible = true) 
+{
 	ignoreUnused(radiusLength, objectToBeFound, isObjectVisible);
 	return {};
 }
@@ -178,10 +168,8 @@ int getTotalObjectsWithinRadius(
 /*
  10)
  */
-void disableInput(
-	bool isInputEnabled,
-	int inputType,
-	double bufferTime = 0.005) {
+void disableInput(bool isInputEnabled, int inputType, double bufferTime = 0.005) 
+{
 	ignoreUnused(isInputEnabled, inputType, bufferTime);
 }
 
