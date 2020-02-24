@@ -83,7 +83,7 @@ void variableDeclarations() {
 	char stepTwo = 'b';
 	char stepThree = 'c';
 
-	ignoreUnused(eggs, chocolateChips, butterSticks, flour, cinnamon, sugar, cookTime, ovenTemperature, cupsOfMilk, ovenOn, mealReadyToCook, mealCooked, stepOne, stepTwo, stepThree);
+	ignoreUnused(eggs, chocolateChips, butterSticks, flour, cinnamon, sugar, cookTime, ovenTemperature, cupsOfMilk, ovenOn, mealReadyToCook, mealCooked, stepOne, stepTwo, stepThree); //passing variables to one call of ignore unused
 }
 /*
  10 functions
@@ -207,7 +207,7 @@ int main() {
 	// 10)
 	disableInput(true, 1, 0.001);
 
-	ignoreUnused(newWeapon, accountTotalAfterDeposit, modulation, spawnFood, moveSpeed, nearbyObjects);
+	ignoreUnused(newWeapon, accountTotalAfterDeposit, modulation, spawnFood, moveSpeed, nearbyObjects); //passing variables to one call of ignore unused
 
 	std::cout << "good to go!" << std::endl;
 	return 0;
